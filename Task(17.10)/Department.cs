@@ -50,13 +50,20 @@ namespace Task_17._10_
 
         
 
-        public Employee getAllEmp()
+        public void getAllEmp()
         {
-            for(int i = 0; i < Employees.Length;i++)
+            if(Employees.Length > 0)
             {
-                return Employees[i];
+                for (int i = 0; i < Employees.Length; i++)
+                {
+                    GetEmpInfo(Employees[i]);
+                }
             }
-            return null;
+            else
+            {
+                Console.WriteLine("Isci tapilmadi !!");
+            }
+            
         }
         public Employee getEmpsBySalary(double salary)
         {
@@ -87,7 +94,7 @@ namespace Task_17._10_
         }
         public void GetEmpInfo(Employee emp)
         {
-            Console.WriteLine($"Id:{emp.EmployeeId}, Name: {emp.Name}, Surname: {emp.Surname}, Age: {emp.Age}, Department No: {emp.DepartmentNo}");
+            Console.WriteLine($"Id:{emp.EmployeeId}, Name: {emp.Name}, Surname: {emp.Surname}, Age: {emp.Age}, Salary: {emp.Salary}, Department No: {emp.DepartmentNo}");
         }
 
     }

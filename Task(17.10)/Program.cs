@@ -133,15 +133,8 @@
                     case "5":
                         Console.Clear();
                         Console.WriteLine(" ");
-                        Employee employee2 = department.getAllEmp();
-                        if (employee2 != null)
-                        {
-                            department.GetEmpInfo(employee2);
-                        }
-                        else
-                        {
-                            Console.WriteLine("Isci tapilmadi!!");
-                        }
+                        department.getAllEmp();
+                        
                         break;
 
                     case "0":
