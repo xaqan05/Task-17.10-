@@ -1,0 +1,53 @@
+Employee class
+- Id
+- Name
+- Surname
+- Age
+- DepartmentNo
+- Salary -> (encapsulation)
+
+Department class
+- No
+- Employees
+- EmployeeLimit
+- AddEmployee()
+- GetEmployee()
+- GetEmployeeInfo()
+- GetAllEmployees()
+- GetAllEmployeesBySalary()
+- GetAllEmployeesByDepartmentNo()
+
+Helper class-i yaradin:
+- static CheckGroupNo() - parametr olaraq göndərilən groupNo value-nun doğru olub olmamasını yoxlayır və true/false qaytarır
+- static CheckFullname() - parametr olaraq göndərilən fullname value-nun doğru olub olmamasını yoxlayır və true/false qaytarır
+
+Id memberinin deyeri her obyekt yaradilanda +1 vahid artir. (Meselen: ilk obyekt yarandigi zaman Id = 1, 2ci obyekt yarandigi zaman Id = 2)
+Employee class yaradırsınız və bu xüsusiyyətləri olur : Name, Surname, Age, DepartmentNo, Salary. Name, Surname, Age, DepartmentNo və Salary dəyəri təyin olunmamış student yaradıla bilminməməlidir
+
+Department class yaradırsınız və bu xüsusiyyətləri olur: No - departmentin nömrəsini ifadə edir her obyekt yaradilanda +1 vahid artir, Employees - departmentdəki işçilərdən ibarət array-dir, AddEmployee() - bir employee obyekti qəbul edir parametr olaraq və qəbul etdiyi employee obyektini Employees array-ə əlavə edir (əgər EmployeeLimit aşılmırsa), EmployeeLimit - departmentdəki işçi limitini ifadə edir. GetEmployee() - int id parametri qəbul edir, bu parametrə uyğun Employees arrayindən tapdığı employee obyektini geri qaytarır. GetEmployeeInfo() - işçinin məlumatlarını ekranda göstərir.GetAllEmployees() - bütün işçiləri geri qaytarır. GetAllEmployeesBySalary() - int minSalary və int maxSalary qəbul edir, bu maaş aralığındakı işçiləri geri qaytarır.GetAllEmployeesByDepartmentNo() - int departmentNo qəbul edir, və o departmentdə olan işçilərin siyahısını geri qaytarır.
+
+Proqram işə düşdükdə bizdən department yaratmaq üçün EmployeeLimit dəyərini daxil etməyimizi istəməlidir.
+EmployeeLimit 0-dan kiçik və 20-dən böyük ola bilməz
+
+Daha sonra Proqram bizə menu seçimi göstərir aşağıdakı kimi:
+1. Employee əlavə et
+2. İşci axtar
+3. Bütün işçilərə bax
+4. Maaş aralığına görə işçiləri axtarış et
+5. Departamentə görə işçiləri axtarış et
+0. Proqramı bitir
+
+Bu menu pəncərəsi görsəndikdən dərhal sonra proqram bizdən bir seçim etməyimizi istəməlidir
+Əgər 1-i seçsək Employee yaratmaq üçün lazım olan bütün dataları console-dan daxil edirik və bir employee obyekti yaradıb department obyektimizin AddEmployee metodu ilə onu departmentə əlavə edirik (bu zaman əgər departmentdəki işçi limiti dolubsa istifadəçiyə bununla bağlı məlumat çıxsın və yeni bir seçim etməsi istənilsin)
+
+Əgər 2-ni seçsək, bizdən ad və soyad daxil etməyimizi tələb etməlidir və bu parametrlərə uyğun işçinin məlumatları görünməlidir.
+
+Əgər 3-ni seçsək yaratmış olduğumuz department obyektindəki bütün işçilərin məlumatları console pəncərəsində göstərilməlidir
+
+Əgər 4-ü seçsək bizdən maxSalary və minSalary tələb etməlidir və bu aralığa uyğun işçilərin siyahısını ekranda göstərməlidir.
+
+Əgər 5-ü seçsək proqram bizdən bir axtarış dəyəri daxil etməyimizi istəməlidir və DepartmentNo dəyərində həmin axtarış dəyəri olan bütün işçilərin məlumatları console pəncərəsində göstərilməlidir. Bir növ filterizasiya kimi.
+
+Bu 5 seçimdəm hər hansı birini seçdikdən sonra proses bitdək sonra yenidən həmin menu seçimi qarşımıza çıxmalıdır.Misalcün 1-i seçdim,1 işçinin datalarını console-dan daxil etdim bitirdimsə daha sonra yenidən bu 5 seçim göstərilməli və hansını seçmək istədiyim soruşulmalıdır.
+
+Əgər 0-ı seçsək proses bitməlidir
